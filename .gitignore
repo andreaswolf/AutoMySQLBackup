@@ -1,0 +1,6 @@
+*~
+*.bak
+*.tmp
+
+# prevent accidential checkin of a production config version (with passwords and stuff)
+automysqlbackup.conf
