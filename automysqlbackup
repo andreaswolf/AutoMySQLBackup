@@ -459,6 +459,9 @@ parse_configuration () {
 	  opt=( "${opt[@]}" '--single-transaction' )
 	  opt_fullschema=( "${opt_fullschema[@]}" '--single-transaction' )
     }
+    [[ "${CONFIG_mysql_dump_routines}" = "yes" ]] && {
+	  opt=( "${opt[@]}" '--routines' )
+    }
     [[ "${CONFIG_mysql_dump_commcomp}" = "yes" ]]		&& {
 	  opt=( "${opt[@]}" '--compress' )
 	  opt_fullschema=( "${opt_fullschema[@]}" '--compress' )
